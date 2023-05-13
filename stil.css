@@ -29,30 +29,32 @@ p {
 }
 
 #siz {
+    border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans";
     font-size: 20px;
     outline-style: solid;
     outline-width: 2px;
-    border-radius: 0px;
     width: 3%;
 
 }
 
 #bionic {
+    border-radius: 5px;
     height: 25px;
     width: 25px;
 }
 
 #font {
+    border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans";
     font-size: 20px;
     height: 7%;
     width: 10%;
-    border-radius: 0px;
     background-color: #ffffff;
 }
 
 .slider {
+    border-radius: 5px;
     width: 60%;
     height: 30px;
     outline-style: solid;
@@ -63,7 +65,14 @@ p {
     transition: opacity .2s;
 }
 
-
+.slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    background: #05265d;
+    cursor: pointer;
+}
 
 .slider:hover {
     opacity: 1;
@@ -73,7 +82,7 @@ p {
 .slider::-moz-range-thumb {
     width: 20px;
     height: 25px;
-    border-radius: 0px;
+    border-radius: 5px;
     outline: none;
     background: #05265d;
     cursor: pointer;

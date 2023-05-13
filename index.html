@@ -3,52 +3,55 @@
 
 <head>
     <link rel="stylesheet" href="stil.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <p>
-        Pick a font:<br>
-        <select name="font" id="font">
-            <option value="comicsans" id="comicsans">Comic Sans</option>
-            <option value="hobostd" id="hobostd">Hobo Std</option>
-            <option value="tvoja" id="tvoja">tvoja</option>
-            <option value="mami" id="mami">mami</option>
-            <option value="ligma" id="ligma">ligma</option>
-        </select><br>
 
-        <label for="bionic">Bionic: </label>
-        <input type="checkbox" id="bionic" name="bionic" value="bionic"><br>
-    </p>
+    <div>
+        <p>
+            Pick a font:<br>
+            <select name="font" id="font">
+                <option value="comicsans" id="comicsans">Comic Sans</option>
+                <option value="hobostd" id="hobostd">Hobo Std</option>
+                <option value="tvoja" id="tvoja">tvoja</option>
+                <option value="mami" id="mami">mami</option>
+                <option value="ligma" id="ligma">ligma</option>
+            </select><br>
 
-    <p>
-        Choose your font size: <br>
-        <input type="range" min="10" max="100" value="24" class="slider" id="size"><br>
+            <label for="bionic">Bionic: </label>
+            <input type="checkbox" id="bionic" name="bionic" value="bionic"><br>
+        </p>
+    </div>
+    <div>
+        <p>
+            Choose your font size: <br>
+            <input type="range" min="10" max="100" value="24" class="slider" id="size"><br>
 
-        Current font size: <input type="number" min="10" max="100" value="24" id="siz" name="siz"><br><br>
+            Choose the font spacing: <br>
+            <input type="range" min="1" max="10" value="2" class="slider" id="spacing">
+            <br>
 
-        Choose the font spacing: <br>
-        <input type="range" min="1" max="10" value="2" class="slider" id="spacing">
-        <br>
+            Choose the line spacing: <br>
+            <input type="range" min="1" max="30" value="10" class="slider" id="line">
+            <br>
+        </p>
 
-        Choose the line spacing: <br>
-        <input type="range" min="1" max="30" value="10" class="slider" id="line">
-        <br>
-    </p>
+        <p>
+            Brightness: <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="brightness">
+            <br>
 
-    <p>
-        Brightness: <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="brightness">
-        <br>
+            Hue: <br>
 
-        Hue: <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="hue">
+            <br>
 
-        <input type="range" min="0" max="100" value="0" class="slider" id="hue">
-        <br>
-
-        Saturation: <br>
-        <input type="range" min="0" max="100" value="0" class="slider" id="saturation">
-        <br>
-    </p>
+            Saturation: <br>
+            <input type="range" min="0" max="100" value="0" class="slider" id="saturation">
+            <br>
+        </p>
+    </div>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-function bionic(str){
+function bionic(str) {
     let beseda = str.split(" ");
     let bold = [];
     for (let i = 0; i < beseda.length; i++) {
@@ -21,7 +21,7 @@ function fontdropdown() {
 }
 
 
-document.getElementById("").addEventListener("onclick", comicsans)
+document.getElementById("font").addEventListener("onclick", comicsans)
 
 function comicsans() {
     document.getElementsByTagName("div").style.fontFamily = "Comic Sans MS"
