@@ -1,1 +1,9 @@
+@font-face {
+    font-family: 'dyslexie';
+    src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+}
+
+.dyslexie {
+    font-family: 'dyslexie', sans-serif;
+}
 

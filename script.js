@@ -15,4 +15,16 @@ function bionic(str){
 
 document.body.innerHTML = bionic(document.body.innerHTML);
 
+document.getElementById("").addEventListener("onclick", fontdropdown)
+function fontdropdown() {
+    document.getElementById("").style.display = "block"
+}
+
+
+document.getElementById("").addEventListener("onclick", comicsans)
+
+function comicsans() {
+    document.getElementsByTagName("div").style.fontFamily = "Comic Sans MS"
+}
+
 
