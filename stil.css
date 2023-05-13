@@ -9,6 +9,11 @@ body {
 
 .dyslexie {
     font-family: 'dyslexie', sans-serif;
+    font-size: 20px;
+    height: 7%;
+    width: 10%;
+    border-radius: 0px;
+    background-color: #ffffff;
 
 }
 
