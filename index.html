@@ -9,6 +9,7 @@
 <body>
 
     <div>
+        <h2>FONT</h2><br>
         <p>
             Pick a font:<br>
             <select name="font" id="font">
@@ -22,36 +23,181 @@
             <label for="bionic">Bionic: </label>
             <input type="checkbox" id="bionic" name="bionic" value="bionic"><br>
         </p>
-    </div>
-    <div>
         <p>
-            Choose your font size: <br>
+            Choose your size: <br>
             <input type="range" min="10" max="100" value="24" class="slider" id="size"><br>
 
-            Choose the font spacing: <br>
-            <input type="range" min="1" max="10" value="2" class="slider" id="spacing">
+            Choose the spacing: <br>
+            <input type="range" min="1" max="20" value="2" class="slider" id="spacing">
             <br>
 
             Choose the line spacing: <br>
-            <input type="range" min="1" max="30" value="10" class="slider" id="line">
+            <input type="range" min="30" max="100" value="30" class="slider" id="line">
             <br>
         </p>
 
         <p>
-            Brightness: <br>
-            <input type="range" min="0" max="100" value="0" class="slider" id="brightness">
+            Red: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="FR">
             <br>
 
-            Hue: <br>
+            Green: <br>
 
-            <input type="range" min="0" max="100" value="0" class="slider" id="hue">
+            <input type="range" min="0" max="255" value="0" class="slider" id="FG">
             <br>
 
-            Saturation: <br>
-            <input type="range" min="0" max="100" value="0" class="slider" id="saturation">
+            Blue: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="FB">
             <br>
         </p>
     </div>
+    <div>
+        <h2>BACKGROUND</h2><br>
+        <p>
+            Red: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="BR">
+            <br>
+
+            Green: <br>
+
+            <input type="range" min="0" max="255" value="0" class="slider" id="BG">
+            <br>
+
+            Blue: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="BB">
+            <br>
+        </p>
+    </div>
+    <script>
+        var Sslider = document.getElementById("size");
+        var SPslider = document.getElementById("spacing");
+        var LNslider = document.getElementById("line");
+        var FRslider = document.getElementById("FR");
+        var FGslider = document.getElementById("FG");
+        var FBslider = document.getElementById("FB");
+        var BRslider = document.getElementById("BR");
+        var BGslider = document.getElementById("BG");
+        var BBslider = document.getElementById("BB");
+        Sslider.oninput = function () {
+            document.body.style.fontSize = this.value + "px";
+            //document.body.style.color = "#" + Number(2 * this.value).toString(16) + "0000";
+        }
+        SPslider.oninput = function () {
+            document.body.style.letterSpacing = this.value + "px";
+        }
+        LNslider.oninput = function () {
+            document.body.style.lineHeight = this.value + "px";
+        }
+        FRslider.oninput = function () {
+            var R = "";
+            if (FRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(FRslider.value).toString(16);
+            var G = "";
+            if (FGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(FGslider.value).toString(16);
+            var B = "";
+            if (FBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(FBslider.value).toString(16);
+            document.body.style.color = "#" + R + G + B;
+        }
+        FGslider.oninput = function () {
+            var R = "";
+            if (FRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(FRslider.value).toString(16);
+            var G = "";
+            if (FGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(FGslider.value).toString(16);
+            var B = "";
+            if (FBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(FBslider.value).toString(16);
+            document.body.style.color = "#" + R + G + B;
+        }
+        FBslider.oninput = function () {
+            var R = "";
+            if (FRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(FRslider.value).toString(16);
+            var G = "";
+            if (FGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(FGslider.value).toString(16);
+            var B = "";
+            if (FBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(FBslider.value).toString(16);
+            document.body.style.color = "#" + R + G + B;
+        }
+        BRslider.oninput = function () {
+            var R = "";
+            if (BRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(BRslider.value).toString(16);
+            var G = "";
+            if (BGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(BGslider.value).toString(16);
+            var B = "";
+            if (BBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(BBslider.value).toString(16);
+            document.body.style.backgroundColor = "#" + R + G + B;
+        }
+        BGslider.oninput = function () {
+            var R = "";
+            if (BRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(BRslider.value).toString(16);
+            var G = "";
+            if (BGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(BGslider.value).toString(16);
+            var B = "";
+            if (BBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(BBslider.value).toString(16);
+            document.body.style.backgroundColor = "#" + R + G + B;
+        }
+        BBslider.oninput = function () {
+            var R = "";
+            if (BRslider.value < 16) {
+                R = "0"
+            }
+            R += Number(BRslider.value).toString(16);
+            var G = "";
+            if (BGslider.value < 16) {
+                G = "0"
+            }
+            G += Number(BGslider.value).toString(16);
+            var B = "";
+            if (BBslider.value < 16) {
+                B = "0"
+            }
+            B += Number(BBslider.value).toString(16);
+            document.body.style.backgroundColor = "#" + R + G + B;
+        }
+
+    </script>
 </body>
 
 </html>
